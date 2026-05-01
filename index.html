@@ -2,7 +2,9 @@
 <html lang="sr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <title>Lokly</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -314,21 +316,27 @@ html,body{height:100%;background:#B8DAFA;font-family:var(--f);display:flex;align
 
 .sp{height:20px;}
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   html, body {
     background: var(--off);
     align-items: flex-start;
     justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
   .phone {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     height: 100dvh;
     border-radius: 0;
     box-shadow: none;
+    min-width: unset;
+    max-width: unset;
   }
   .notch { display: none; }
   .sbar { display: none; }
+  .screen { height: calc(100dvh - 80px); }
 }
 </style>
 </head>
